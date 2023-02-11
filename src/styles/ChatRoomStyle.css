@@ -10,6 +10,52 @@
     padding: 10px;
 }
 
+@media only screen and (max-width: 767px) {
+
+    /* CSS rules for mobile devices here */
+    /* Ejemplo: */
+    .chat-room-container {
+        position: absolute;
+        right: 20px;
+        bottom: 20px;
+        border-color: black;
+        border: 5px solid 'black';
+        background-color: black;
+        height: 90%;
+        width: 90%;
+        padding: 10px;
+    }
+}
+
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    margin: 100px auto;
+    /* height: 100%; */
+    /* width: 100%; */
+}
+
+.text-input {
+    border: 1px solid yellow;
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    font-size: 20px;
+    margin: 10px 50%;
+}
+
+.enter-room-button {
+    background-color: darkgreen;
+    border: 1px solid darkgreen;
+    color: yellow;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 20px;
+}
 .new-message__container {
     position: absolute;
     bottom: 10px;

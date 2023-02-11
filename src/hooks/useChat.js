@@ -13,7 +13,7 @@ export const useChat = (roomId) => {
     // Creates a WebSocket connection
     socketRef.current = socketIOClient(SOCKET_SERVER_URL, {
       query: { roomId },
-      transports: ["websocket"]
+      transports: ["websocket"],
     });
     
     // Listens for incoming messages

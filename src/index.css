@@ -1,4 +1,9 @@
 :root {
+  width: 100%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
   font-family:'Courier New', Courier, monospace;
   line-height: 1.5;
   font-weight: 400;
@@ -25,10 +30,11 @@ a:hover {
 
 body {
   margin: 0;
+  padding: 1%;
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  /* place-items: center; */
+  /* min-width: 320px;
+  min-height: 100vh; */
 }
 
 h1 {

@@ -14,13 +14,13 @@ export const Home = () => {
     <div className="home-container">
       <input
         type="text"
-        placeholder="Room"
+        placeholder="Sala"
         value={roomName}
         onChange={handleRoomNameChange}
-        className="text-input-field"
+        className="text-input"
       />
       <Link to={`/${roomName}`} className="enter-room-button">
-        Join room
+        INGRESAR
       </Link>
     </div>
   );
