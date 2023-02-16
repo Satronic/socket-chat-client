@@ -7,7 +7,39 @@
     background-color: black;
     height: 90%;
     width: 30%;
-    padding: 10px;
+    padding-left: 0.5%;
+    padding-right: 0.5%;
+}
+
+.title-container {
+    padding: 2%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.messages-container {
+    padding: 0;
+    margin: 0;
+    height: 75%;
+}
+
+.room-name {
+    padding: 0;
+    margin: 0;
+    color: yellow;
+    font-weight: bold;
+    background-color: black;
+}
+
+.messages-list {
+    background-color: lightgray;
+    padding: 1%;
+    margin: 0;
+    height: 100%;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory; /* Mantiene el scrroll en la posicion inferior */
 }
 
 @media only screen and (max-width: 767px) {
@@ -56,6 +88,7 @@
     padding: 10px;
     font-size: 20px;
 }
+
 .new-message__container {
     position: absolute;
     bottom: 10px;
@@ -89,29 +122,25 @@
     background-color: aqua;
 } */
 
-.messages-list {
-    /* background-color: black; */
-    padding: 0;
+.message-item {
+    width: 75%;
+    list-style: none;
+    border-radius: 10px;
+    padding: 3%;
+    scroll-snap-align: start; /* Mantiene el scrroll en la posicion inferior */
+}
+
+.message-item:last-child {
+    background-color: brown;
+    /* scroll-snap-align: end; */
 }
 
 .my-message {
-    /* position: absolute; */
-    /* right: 0px; */
     background-color: darkblue;
-    list-style: none;
-    margin-left: 20%;
-    margin-top: 5%;
-    padding: 3%;
-    border-radius: 5px;
+    margin: 0 0 1% 18%; 
 }
 
 .received-message {
-    /* position: absolute; */
-    /* left: 0px; */
     background-color: darkgreen;
-    list-style: none;
-    margin-right: 20%;
-    margin-top: 5%;
-    padding: 3%;
-    border-radius: 5px;
+    margin: 0 18% 1% 1%;
 }

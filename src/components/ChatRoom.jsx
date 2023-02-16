@@ -4,7 +4,11 @@ import "../styles/ChatRoomStyle.css";
 import { useChat } from "../hooks/useChat";
 import { useLocation } from 'react-router-dom';
 
+
+
+
 export const ChatRoom = () => {
+    
     let { pathname } = useLocation();
     const { messages, sendMessage } = useChat(pathname); // Creates a websocket and manages messaging
     const [newMessage, setNewMessage] = React.useState(""); // Message to be sent
@@ -16,11 +20,19 @@ export const ChatRoom = () => {
     const handleSendMessage = () => {
         sendMessage(newMessage);
         setNewMessage("");
+        // list.scrollTop = list.scrollHeight + list.offsetHeight;
+        const list = document.getElementsByClassName("messages-list");
+        list[0].scrollTop = list[0].scrollHeight - list[0].offsetHeight;
+        // list.scrollIntoView(true);
+        // list.scrollTop = 0;
+        console.log(list[0].scrollTop);
     };
 
     return (
         <div className="chat-room-container">
-            <h2 className="room-name">Room: {pathname}</h2>
+            <div className="title-container">
+                <h2 className="room-name">Sala: {pathname.replace('/', '')}</h2>
+            </div>
             <div className="messages-container">
                 <ol className="messages-list">
                     {messages.map((message, i) => (
